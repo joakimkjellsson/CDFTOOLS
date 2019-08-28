@@ -89,6 +89,7 @@ MODULE modCdfNames
   CHARACTER(LEN=256) :: cn_vosaline='vosaline' !: salinity
   CHARACTER(LEN=256) :: cn_vozocrtx='vozocrtx' !: zonal velocity
   CHARACTER(LEN=256) :: cn_vomecrty='vomecrty' !: meridional velocity
+  CHARACTER(LEN=256) :: cn_vozoeivu='vozoeivu' !: zonal Eddy Induced Velocity
   CHARACTER(LEN=256) :: cn_vomeeivv='vomeeivv' !: meridional Eddy Induced Velocity
   CHARACTER(LEN=256) :: cn_vovecrtz='vovecrtz' !: vertical velocity
   CHARACTER(LEN=256) :: cn_sossheig='sossheig' !: Sea Surface Height
@@ -126,6 +127,19 @@ MODULE modCdfNames
   CHARACTER(LEN=256) :: cn_zoisoinp='zoisoinp' !: moc in the Indo-Pacific
   CHARACTER(LEN=256) :: cn_zoisoind='zoisoind' !: moc in the Indian ocean
   CHARACTER(LEN=256) :: cn_zoisoinp0='zoisoinp0' !: moc in the Indo-Pacific Net
+  
+  ! Thermohaline streamfunctions
+  CHARACTER(LEN=256) :: cn_zothsatl='zothsatl' !: THS in the Atlantic
+  CHARACTER(LEN=256) :: cn_zothsglo='zothsglo' !: THS in the Global ocean
+  CHARACTER(LEN=256) :: cn_zothspac='zothspac' !: THS in the Pacific
+  CHARACTER(LEN=256) :: cn_zothsinp='zothsinp' !: THS in the Indo-Pacific
+  CHARACTER(LEN=256) :: cn_zothsind='zothsind' !: THS in the Indian ocean
+  
+  CHARACTER(LEN=256) :: cn_zovolatl='zovolatl' !: Volume in the Atlantic
+  CHARACTER(LEN=256) :: cn_zovolglo='zovolglo' !: Volume in the Global ocean
+  CHARACTER(LEN=256) :: cn_zovolpac='zovolpac' !: Volume in the Pacific
+  CHARACTER(LEN=256) :: cn_zovolinp='zovolinp' !: Volume in the Indo-Pacific
+  CHARACTER(LEN=256) :: cn_zovolind='zovolind' !: Volume in the Indian ocean
   
   ! transport variables
   CHARACTER(LEN=256) :: cn_vozout='vozout'     !: product U x T at U point

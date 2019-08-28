@@ -25,7 +25,7 @@ EXEC = cdfmoy cdfmoyt cdfstd  cdfmoy_weighted cdfmoy_freq cdfvT cdfuv\
        cdfrhoproj  cdfzisot cdfsigintegr cdfpvor \
        cdfmhst cdfmht_gsop cdfvhst cdfvtrp cdftransport cdfvFWov \
        cdfsigtrp cdfsigtrp_broken cdftransig_xy3d\
-       cdfpsi cdfmoc  cdfmocsig cdfmean cdfdegrad \
+       cdfpsi cdfmoc  cdfmocsig cdfthermohaline cdfmean cdfdegrad \
        cdfheatc cdfzonalmean cdfzonalmeanvT cdfhflx cdfwflx cdfbuoyflx\
        cdfmxlheatc cdfmxlsaltc cdfmxlhcsc cdfvertmean cdfthic cdfvint cdffwc\
        cdfpendep cdfzonalsum cdficediags  cdfzonalout\
@@ -279,6 +279,9 @@ cdfmoc_rapid_26N_r8_ORCA025: cdfio.o eos.o  cdfmoc_rapid_26N_r8_ORCA025.f90
 
 cdfmocsig: cdfio.o eos.o modutils.o  cdfmocsig.f90 
 	$(F90)  cdfmocsig.f90 -o $(BINDIR)/cdfmocsig cdfio.o eos.o modcdfnames.o modutils.o $(FFLAGS)
+
+cdfthermohaline: cdfio.o eos.o modutils.o cdfthermohaline.f90
+	$(F90)  cdfthermohaline.f90 -o $(BINDIR)/cdfthermohaline cdfio.o eos.o modcdfnames.o modutils.o $(FFLAGS) 
 
 cdfmean: cdfio.o  cdfmean.f90
 	$(F90) cdfmean.f90 -o $(BINDIR)/cdfmean cdfio.o modcdfnames.o $(FFLAGS)
